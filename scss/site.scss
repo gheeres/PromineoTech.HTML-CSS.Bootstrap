@@ -1,0 +1,166 @@
+// scss-docs-start theme-color-variables
+$primary:       #e5a00d;
+//$secondary:     $gray-600 !default;
+//$success:       $green !default;
+//$info:          $cyan !default;
+//$warning:       $yellow !default;
+//$danger:        $red !default;
+//$light:         $gray-100 !default;
+//$dark:          $gray-900 !default;
+// scss-docs-end theme-color-variables
+
+$body-color: #fff;
+
+// scss-docs-start font-variables
+$font-family-sans-serif:      -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif;
+// scss-docs-end font-variables
+  
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+:root {
+  // Override dark-theme
+  --bs-body-color: var(--bs-white);
+  
+  --app-accent-color: var(--bs-primary);
+  --app-color-overlay-60: #00000099;
+  --app-color-overlay-30: #0000004d;
+  --app-text-color: var(--bs-light-text);
+  --app-text-muted-color: var(--bs-gray-500);
+}
+  
+header {
+  height: 48px;
+  font-size: 1.5em;
+}
+  
+.bg-dark-overlay {
+  background: var(--app-color-overlay-60);
+}
+.years-label {
+  font-style: italic;
+  font-size: 0.85em;
+  color: var(--app-text-muted-color);
+}
+.seasons-label {
+  font-style: italic;
+  font-size: 0.85em;
+}
+  
+#main-menu {
+  min-width: 200px;
+  background: var(--app-color-overlay-30);
+
+  .nav-link.active {
+    color: var(--app-accent-color);
+    background-color: inherit;
+  }
+  svg {
+    height: 1.15em;
+  }
+  .nav-link {
+    color: var(--app-text-color);
+  }
+  .nav-link:hover {
+    color: var(--app-accent-color);
+    background: var(--app-color-overlay-30);
+    border-left: solid 1px var(--app-accent-color);
+  }
+}
+  
+.tv-list {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+
+  .tv-list-item {
+    margin-right: 1.5em;
+    margin-bottom: 1em;
+    width: min-content;
+
+    a {
+      color: var(--app-accent-color);
+    }
+    .tv-list-image {
+        display: block;
+        height: 250px;
+        &:hover {
+          /* border: solid 1px var(--app-highlight-color); */
+          outline: 1px solid var(--app-accent-color);
+        }
+    }
+  }
+}
+
+.actor-list {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+
+  .actor-list-item {
+    margin-right: 1.5em;
+    margin-bottom: 1em;
+    width: min-content;
+
+    .actor-list-image {
+      display: block;
+      height: 150px;
+      &:hover {
+        /* border: solid 1px var(--app-highlight-color); */
+        outline: 1px solid var(--app-accent-color);
+      }
+    }
+    .actor-name-label {
+      margin-top: 0.5em;
+      color: var(--app-accent-color);
+    }
+    .character-name-label {
+      font-size: 0.7em;
+    }
+  }
+}
+
+.summary {
+  display: flex;
+  flex-direction: row;
+
+  img {
+    height: 300px;  
+  }
+}
+
+.tv-summary {
+  .summary-description {
+    font-size: 0.9em;
+  }
+}
+.actor-summary {
+  h1,h2,h3,h4,h5 {
+    font-size: 1.25em;
+    margin-bottom: 1em;
+  }
+  p {
+    font-size: 0.9em;
+  }
+}
+
+.table-tv-episode {
+  > thead {
+    border-bottom: solid 1px var(--app-highlight-color);
+    > * {
+      > * {
+        color: var(--app-accent-color);
+      }
+    }
+  }
+  > tbody {
+    tr {
+      > * {
+        &:hover {
+          color: var(--app-accent-color);
+        }
+      }
+    }
+  }
+}
