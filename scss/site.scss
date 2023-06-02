@@ -1,0 +1,24 @@
+// Include any default variable overrides here (though functions won't be available)
+
+$primary:       #e5a00d;
+$body-color:    #fff;
+$body-bg:       #000;
+$hover-color:   #f00;
+ 
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+//.tv-list a {
+//  text-decoration: none;
+//}
+//.tv-list a:hover {
+//  color: #{ $hover-color };
+//}
+
+.tv-list {
+  a {
+    text-decoration: none;
+    &:hover {
+      color: #{ $hover-color };
+    }
+  }  
+}
