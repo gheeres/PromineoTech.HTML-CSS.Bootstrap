@@ -1,0 +1,66 @@
+$primary: #e5a00d;
+$danger: #ff0000;
+//$primary: #ff0000;
+$body-color: #000;
+
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+:root {
+  --app-accent-color: var(--bs-primary);
+  --app-text-color: var(--bs-light-text);
+  --app-color-overlay-60: #00000099;
+  --app-color-overlay-30: #0000004d;
+}
+
+header {
+  height: 48px;
+  font-size: 1.5em;  
+}
+.bg-dark-overlay {
+  background: var(--app-color-overlay-60);
+}
+
+#main-menu {
+  min-width: 200px;
+  background: var(--app-color-overlay-30);
+
+  svg {
+    height: 1.15em;
+  }
+  .nav-link {
+    color: var(--app-text-color);
+  }
+  .nav-link.active {
+    color: var(--app-accent-color);
+    background-color: inherit;
+  }
+  .nav-link:hover {
+    color: var(--app-accent-color);
+    background: var(--app-color-overlay-30);
+    border-left: solid 1px var(--app-accent-color);
+  }
+}
+.tv-list {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+
+  .tv-list-item {
+    margin-right: 1.5em;
+    margin-bottom: 1em;
+    width: min-content;
+
+    a {
+      color: var(--app-accent-color);
+    }
+    .tv-list-image {
+      display: block;
+      height: 250px;
+
+      &:hover {
+        outline: 1px solid var(--app-accent-color);
+      }
+    }
+  } 
+}
